@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id              String   @id @default(cuid())
+  platform        String   // imonetizeit, trafee, clickdealer
+  clickId         String?  // <click_id>, {track}, #s2#
+  clickId2        String?
+  clickId3        String?
+  clickId4        String?
+  clickId5        String?
+  token1          String?
+  token2          String?
+  payout          Float?
+  country         String?
+  os              String?
+  trafficType     String?
+  connectionType  String?
+  carrier         String?
+  holdPayout      Float?
+  currency        String?
+  name            String?  // offer name
+  goal            String?
+  extClickId      String?
+  sum             Float?   // conversion payout
+  saleTime        DateTime?
+  subSource       String?
+  transactionId   String?
+  intClickId      String?
+  advTid          String?
+  ext1            String?
+  ext2            String?
+  ext3            String?
+  ext4            String?
+  ext5            String?
+  ext6            String?
+  leadId          String?  // #leadid#
+  affid           String?  // #affid#
+  oid             String?  // #oid#
+  campid          String?  // #campid#
+  cid             String?  // #cid#
+  tid             String?  // #tid#
+  s1              String?  // #s1#
+  s3              String?  // #s3#
+  s4              String?  // #s4#
+  s5              String?  // #s5#
+  udid            String?
+  priceUsd        Float?
+  disposition     String?
+  utcUnixTime     Int?
+  sourceDate      DateTime?
+  fbclid          String?
+  ttclid          String?
+  gclid           String?
+  xclid           String?
+  actionType      String?
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+  utmTerm         String?
+  utmContent      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
