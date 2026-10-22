@@ -1,5 +1,5 @@
 {
-  "name": "cpa-lead-dashboard",
+  "name": "reports",
   "version": "1.0.0",
   "description": "Real-time CPA lead tracking dashboard",
   "main": "index.js",
