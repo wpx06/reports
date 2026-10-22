@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# CPA Lead Dashboard - Auto Install Script
+# reports - Auto Install Script
 # Supported: Ubuntu, Debian, CentOS, macOS
 
 set -e
